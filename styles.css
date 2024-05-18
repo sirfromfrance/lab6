@@ -132,7 +132,7 @@ button {
 .nineth {
   transition: background-color 0.3s ease;
 }
-.change-color {
+.changeCcolor {
   background-color: rgb(250, 178, 254);
   border-radius: 10px;
   margin: 0px;
