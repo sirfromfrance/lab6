@@ -91,9 +91,9 @@ function correctInput() {
   }
 }
 
-const boxStore = document.querySelector("#boxes");
+const boxStore = document.querySelector("#box");
 const createButton = document.querySelector("[data-create]");
-const destroyButton = document.querySelector("[data-destroy]");
+const deleteButton = document.querySelector("[data-destroy]");
 const input = document.querySelector("#controls input");
 const inputMin = Number(input.getAttribute("min"));
 const inputMax = Number(input.getAttribute("max"));
@@ -101,5 +101,13 @@ const inputMax = Number(input.getAttribute("max"));
 input.value = 1;
 
 createButton.addEventListener("click", () => box(input.value));
-destroyButton.addEventListener("click", () => deleteBox());
+deleteButton.addEventListener("click", () => deleteBox());
 input.addEventListener("input", () => correctInput());
+
+//9
+
+function backColor() {
+  const change = colorFunc();
+  document.body.style.backgroundColor = change;
+  document.querySelector(".color").textContent = change;
+}

@@ -110,7 +110,7 @@ button {
 }
 
 #createButton,
-#destroyButton {
+#deleteButton {
   padding: 10px 20px;
   background-color: #9bf55f;
   border-radius: 10px;
@@ -120,11 +120,21 @@ button {
   margin: 0 5px;
 }
 
-#destroyButton {
+#deleteButton {
   background-color: #ee3131;
 }
 
-#boxes {
+#box {
   display: flex;
   flex-wrap: wrap;
+}
+
+.nineth {
+  transition: background-color 0.3s ease;
+}
+.change-color {
+  background-color: rgb(250, 178, 254);
+  border-radius: 10px;
+  margin: 0px;
+  margin-left: 200px;
 }
