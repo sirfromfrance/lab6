@@ -111,3 +111,7 @@ function backColor() {
   document.body.style.backgroundColor = change;
   document.querySelector(".color").textContent = change;
 }
+document.addEventListener("DOMContentLoaded", (event) => {
+  const changeColorButton = document.querySelector(".changeCcolor");
+  changeColorButton.addEventListener("click", backColor);
+});
