@@ -84,12 +84,22 @@ function deleteBox() {
   boxStore.innerHTML = "";
 }
 
+function correctInput() {
+  if (input.value > inputMax || input.value < inputMin) {
+    alert(`Напишіть число з ${inputMin} по ${inputMax}`);
+    input.value = 1;
+  }
+}
+
 const boxStore = document.querySelector("#boxes");
 const createButton = document.querySelector("[data-create]");
 const destroyButton = document.querySelector("[data-destroy]");
 const input = document.querySelector("#controls input");
+const inputMin = Number(input.getAttribute("min"));
+const inputMax = Number(input.getAttribute("max"));
 
 input.value = 1;
 
 createButton.addEventListener("click", () => box(input.value));
 destroyButton.addEventListener("click", () => deleteBox());
+input.addEventListener("input", () => correctInput());
